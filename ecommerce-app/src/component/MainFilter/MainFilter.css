@@ -1,0 +1,9 @@
+.border-left-right {
+    border-left: 1px solid rgba(134, 134, 134, 0.712);
+    border-right: 1px solid rgba(134, 134, 134, 0.712);
+    height: 100%;
+}
+.border-left {
+    border-left: 1px solid rgba(134, 134, 134, 0.712);
+    padding-left: 3%;
+}

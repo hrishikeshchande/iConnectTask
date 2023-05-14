@@ -1,0 +1,9 @@
+.card-img-top{
+    max-height: 230px;
+    min-height: 230px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+.card{
+    margin: auto;
+}
