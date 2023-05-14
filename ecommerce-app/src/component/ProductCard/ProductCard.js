@@ -6,19 +6,20 @@ import data from '../../../src/productData/db.json'
 function ProductCard() {
 
     const [product, setProduct] = useState([]);
-    useEffect(()=>{
+    useEffect(() => {
         setProduct(data.products);
     })
 
     const handleClick = (id) => {
-      window.location.href = `/products/${id}`;
+        window.location.href = `/products/${id}`;
     }
 
     return (
         <>
             <div className='container-fluid mt-3'>
-                <div className='row'>
-                {product.map(item => (
+                {product.length >= 1 ? (
+                    <div className='row'>
+                        {product.map(item => (
                             <div className='col-lg-3 col-md-4 col-sm-12 p-4' onClick={() => handleClick(item.id)}>
                                 <div class="card shadow" style={{ width: '18rem', borderWidth: '0px' }}>
                                     <img src={item.thumbnail} class="card-img-top py-1" />
@@ -28,8 +29,12 @@ function ProductCard() {
                                     </div>
                                 </div>
                             </div>
-                   ))}
-                </div>
+                        ))}
+
+                    </div>)
+                    : (
+                    <h3>Product Unavailable</h3>
+                   )}
             </div>
         </>
     )

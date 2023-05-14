@@ -41,7 +41,7 @@ function MainFilter() {
                     </div>
                 </div>
                 <div className="col-lg-4 col-sm-12 col-md-4 d-flex justify-content-around d-flex align-items-center my-2">
-                    <h5>{productCount} Products</h5>
+                {productCount>0?(<h5> {productCount} Products</h5>):(<h5> 0 Products</h5>)}
                 </div>
             </div>
         </div></>)
